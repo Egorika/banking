@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Spring MVC Blog</title>
+</head>
+
+<body>
+<header th:replace="layout :: site-header"></header>
+
+<div class="col-sm-12 blog-header">
+    <div class="container">
+        <h1 class="blog-title">Блог</h1>
+    </div>
+</div>
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-xl-9 blog-main">
+            <div class="blog-post" th:each="post : ${latest5posts}">
+                <h2 class="blog-post-title"><a th:text="${post.title}" th:href="@{'/posts/view/' + ${post.id}}"></a>
+                </h2>
+                <p class="blog-post-meta"
+                   th:text="${#dates.format(new java.util.Date(post.date),'HH:mm, dd.MM.yyyy')}">18:08, 21 ноября
+                    2017</p>
+
+                <p class="blog-post-body" th:text="${post.body}" contenteditable="true"></p>
+                <hr>
+            </div>
+        </div><!-- /.blog-main -->
+
+        <aside class="col-xl-3 ml-sm-auto blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>Кратко о блоге</h4>
+                <p>Этот блог был создан прежде всего для самого себя. Здесь можно найти какую-то субъективно интересную
+                    информацию, которая может быть полезна какому-то кругу людей. Ну, а также мои мысли по этому
+                    поводу.</p>
+            </div>
+            <div class="sidebar-module">
+                <h4>Архив</h4>
+                <ol class="list-unstyled" th:each="latest10 : ${latest10posts}">
+                    <li><a th:href="@{'/posts/view/' + ${latest10.id}}" th:text="${latest10.title}">Ноябрь 2017</a></li>
+                </ol>
+            </div>
+        </aside><!-- /.blog-sidebar -->
+    </div><!-- /.row -->
+    <footer th:replace="layout :: site-footer"></footer>
+</main><!-- /.container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+</body>
+</html>

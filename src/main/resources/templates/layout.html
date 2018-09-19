@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="site-head">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Блог">
+    <meta name="author" content="Егор">
+
+    <title>Блог</title>
+
+    <link href="../public/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="../public/css/blog.css" th:href="@{/css/blog.css}" rel="stylesheet">
+    <link rel="icon" href="../public/img/favicon.ico" th:href="@{/img/favicon.ico}"/>
+    <script src="../public/js/jquery-3.1.0.min.js" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+    <script src="../public/js/blog-scripts.js" th:src="@{/js/blog-scripts.js}"></script>
+    <script src="../public/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+<header th:fragment="site-header" th:remove="tag">
+    <header>
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="nav">
+                    <a class="nav-link active" th:href="@{'/'}">Главная</a>
+                    <a class="nav-link" th:href="@{'/admin/panel'}">Архив</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+</header>
+<h1>Welcome</h1>
+<p>Welcome to the Spring MVC Blog.</p>
+<footer th:fragment="site-footer">
+    <p>TO-DO: добавить иконки соц-сетей</p>
+    <p>
+        <a href="#">Наверх</a>
+    </p>
+</footer>
+</body>
+</html>
