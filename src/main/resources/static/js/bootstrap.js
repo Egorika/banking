@@ -228,7 +228,7 @@ var Alert = function () {
 
     var _proto = Alert.prototype;
 
-    // public
+    // static
     _proto.close = function close(element) {
       element = element || this._element;
 
@@ -402,7 +402,7 @@ var Button = function () {
 
     var _proto = Button.prototype;
 
-    // public
+    // static
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
@@ -615,7 +615,7 @@ var Carousel = function () {
 
     var _proto = Carousel.prototype;
 
-    // public
+    // static
     _proto.next = function next() {
       if (!this._isSliding) {
         this._slide(Direction.NEXT);
@@ -1102,7 +1102,7 @@ var Collapse = function () {
 
     var _proto = Collapse.prototype;
 
-    // public
+    // static
     _proto.toggle = function toggle() {
       if ($(this._element).hasClass(ClassName.SHOW)) {
         this.hide();
@@ -1482,7 +1482,7 @@ var Dropdown = function () {
 
     var _proto = Dropdown.prototype;
 
-    // public
+    // static
     _proto.toggle = function toggle() {
       if (this._element.disabled || $(this._element).hasClass(ClassName.DISABLED)) {
         return;
@@ -1907,7 +1907,7 @@ var Modal = function () {
 
     var _proto = Modal.prototype;
 
-    // public
+    // static
     _proto.toggle = function toggle(relatedTarget) {
       return this._isShown ? this.hide() : this.show(relatedTarget);
     };
@@ -2517,7 +2517,7 @@ var Tooltip = function () {
 
     var _proto = Tooltip.prototype;
 
-    // public
+    // static
     _proto.enable = function enable() {
       this._isEnabled = true;
     };
@@ -3328,7 +3328,7 @@ var ScrollSpy = function () {
 
     var _proto = ScrollSpy.prototype;
 
-    // public
+    // static
     _proto.refresh = function refresh() {
       var _this2 = this;
 
@@ -3613,7 +3613,7 @@ var Tab = function () {
 
     var _proto = Tab.prototype;
 
-    // public
+    // static
     _proto.show = function show() {
       var _this = this;
 
