@@ -1,422 +1,120 @@
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="БАНК">
-    <meta name="author" content="">
 
-    <title>БАНК</title>
-
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          th:href="@{'http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'}">
-    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet">
-<!--
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css"
-          th:href="@{'http://www.jqueryscript.net/css/jquerysctipttop.css'}" rel="stylesheet">
--->
-    <link rel="stylesheet" href="../static/css/animate.css"
-          th:href="@{/css/animate.css}">
-    <link rel="stylesheet" href="../static/css/bootstrap-dropdownhover.css"
-          th:href="@{/css/bootstrap-dropdownhover.css}">
-
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" th:href="@{'http://www.jqueryscript.net/css/jquerysctipttop.css'}">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
-            th:src="@{'https://code.jquery.com/jquery-3.3.1.slim.min.js'}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"
-            th:src="@{'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'}"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"
-            th:src="@{'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'}"></script>
-    <script src="../static/js/blog-scripts.js" th:src="@{/js/blog-scripts.js}"></script>
-
-    <script src="../static/js/bootstrap-dropdownhover.js" th:src="@{/js/bootstrap-dropdownhover.js}"></script>
-
-    <style>
-        .dropdown-inline {
-            display: inline-block;
-            position: relative;
-        }
-    </style>
-</head>
+<head th:replace="layout :: site-head"></head>
 
 <body>
 <header th:replace="layout :: site-header"></header>
 
-<div class="col-sm-12 blog-header">
-    <div class="container">
-        <h1 class="blog-title text-center">test</h1>
-    </div>
-</div>
-
 <main role="main" class="container">
     <div class="row">
-        <div class="col-xl-9 blog-main">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                    Dropdown button
+        <div class="col-xl-2 block-radius p-0">
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button class="btn dropdown-item" type="button" id="2"
-                            data-toggle="dropdown">
-                        Dropdown 3
-                    </button>
-                    <div class="dropdown-menu dropdown-submenu" aria-labelledby="2">
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <button class="btn dropdown-item" type="button" id="23"
-                                data-toggle="dropdown">
-                            Dropdown next
-                        </button>
-                        <div class="dropdown-menu dropdown-submenu" aria-labelledby="23">
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="alert alert-success nav-link dropdown-toggle"
+                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
 
 
-                    <button class="btn dropdown-item" type="button" id="1"
-                            data-toggle="dropdown">
-                        Dropdown 2
-                    </button>
-                    <div class="dropdown-menu dropdown-submenu" aria-labelledby="1">
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <button class="btn dropdown-item" type="button" id="44"
-                                data-toggle="dropdown">
-                            Dropdown 3
-                        </button>
-                        <div class="dropdown-menu dropdown-submenu" aria-labelledby="44">
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                                        <li><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action aa</a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action bb</a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu action 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Another submenu action 2</a></li>
+
+
+                                        <li><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action 1 3</a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action 2 3</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu 3</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action 3 </a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action 3</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-
+            </nav>
         </div>
-        <div class="col-xl-9 blog-main">
-            <!-- Menu -->
-
-        </div>
-
-
-        <div class="bs-demo-dropdowns text-center" style="margin-top:150px;">
-            <div class="container">
-                <h1>jQuery Dropdown On Hover Plugin Demos</h1>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Dropdown
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                       data-animations="bounceInDown bounceInRight bounceInUp bounceInLeft">Dropdown <span
-                            class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-success dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                       data-animations="flipInX flipInY flipInX flipInY">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                       data-animations="zoomInDown zoomInRight zoomInUp zoomInLeft">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                       data-animations="rotateIn rotateIn rotateIn rotateIn">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                       data-animations="zoomIn zoomIn zoomIn zoomIn">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Another dropdown 2 <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdownhover-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Another dropdown <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="col-xl-10">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@fat</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>@twitter</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
-
-        <div class="col-xl-9 blog-main">
+        <div class="col-xl-9 blog-main block-radius">
             <div class="blog-post" th:each="post : ${latest5posts}">
                 <h2 class="blog-post-title"><a th:text="${post.title}" th:href="@{'/posts/view/' + ${post.id}}"></a>
                 </h2>
@@ -427,17 +125,16 @@
                 <p class="blog-post-body" th:text="${post.body}" contenteditable="true"></p>
                 <hr>
             </div>
-        </div>
-    </div><!-- /.blog-main -->
+        </div><!-- /.blog-main -->
 
-    <aside class="col-xl-3 ml-sm-auto blog-sidebar">
-        <div class="sidebar-module">
-            <h4>Архив</h4>
-            <ol class="list-unstyled" th:each="latest10 : ${latest10posts}">
-                <li><a th:href="@{'/posts/view/' + ${latest10.id}}" th:text="${latest10.title}">Ноябрь 2017</a></li>
-            </ol>
-        </div>
-    </aside><!-- /.blog-sidebar -->
+        <aside class="col-xl-3 ml-sm-auto blog-sidebar">
+            <div class="sidebar-module">
+                <h4>Архив</h4>
+                <ol class="list-unstyled" th:each="latest10 : ${latest10posts}">
+                    <li><a th:href="@{'/posts/view/' + ${latest10.id}}" th:text="${latest10.title}">Ноябрь 2017</a></li>
+                </ol>
+            </div>
+        </aside><!-- /.blog-sidebar -->
     </div><!-- /.row -->
     <footer th:replace="layout :: site-footer"></footer>
 </main><!-- /.container -->
