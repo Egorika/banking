@@ -1,142 +1,289 @@
-<!doctype html>
-<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
 
-<head th:replace="layout :: site-head"></head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style3.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+            crossorigin="anonymous"></script>
+
+</head>
 
 <body>
-<header th:replace="layout :: site-header"></header>
 
-<main role="main" class="container">
-    <div class="row">
-        <div class="col-xl-2 block-radius p-0">
-            <nav class="navbar navbar-expand-md">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="alert alert-success nav-link dropdown-toggle"
-                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+<main role="main" class="container" id="app">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
 
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div>
 
-                                        <li><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Subsubmenu action aa</a></li>
-                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Subsubmenu action bb</a></li>
-                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Submenu action 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Another submenu action 2</a></li>
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
 
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+            </li>
+            <li>
+                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            </li>
+        </ul>
+    </nav>
 
-                                        <li><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Subsubmenu action 1 3</a></li>
-                                                <li><a class="dropdown-item" href="#">Another subsubmenu action 2 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu 3</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Subsubmenu action 3 </a></li>
-                                                <li><a class="dropdown-item" href="#">Another subsubmenu action 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+    <!-- Page Content  -->
+
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-success">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
                 </div>
             </nav>
-        </div>
-        <div class="col-xl-10">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                    <th scope="col">Handle</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
 
-        <div class="col-xl-9 blog-main block-radius">
-            <div class="blog-post" th:each="post : ${latest5posts}">
-                <h2 class="blog-post-title"><a th:text="${post.title}" th:href="@{'/posts/view/' + ${post.id}}"></a>
-                </h2>
-                <p class="blog-post-meta"
-                   th:text="${#dates.format(new java.util.Date(post.date),'HH:mm, dd.MM.yyyy')}">18:08, 21 ноября
-                    2017</p>
+            <div class="col-xl-2 col-xs p-0">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-success " type="button"
+                                        id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                    {{ message }}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item " href="#">Submenu</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another submenu action</a></li>
 
-                <p class="blog-post-body" th:text="${post.body}" contenteditable="true"></p>
-                <hr>
+
+                                            <li><a class="dropdown-item " href="#">Subsubmenu</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Subsubmenu action aa</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Another subsubmenu
+                                                        action</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item " href="#">Second
+                                                subsubmenu</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Subsubmenu action bb</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Another subsubmenu
+                                                        action</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item " href="#">Submenu 2</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Submenu action 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Another submenu action 2</a></li>
+
+
+                                            <li><a class="dropdown-item " href="#">Subsubmenu</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Subsubmenu action 1 3</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Another subsubmenu action
+                                                        2
+                                                        3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item " href="#">Second subsubmenu
+                                                3</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Subsubmenu action 3 </a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Another subsubmenu action
+                                                        3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </div><!-- /.blog-main -->
-
-        <aside class="col-xl-3 ml-sm-auto blog-sidebar">
-            <div class="sidebar-module">
-                <h4>Архив</h4>
-                <ol class="list-unstyled" th:each="latest10 : ${latest10posts}">
-                    <li><a th:href="@{'/posts/view/' + ${latest10.id}}" th:text="${latest10.title}">Ноябрь 2017</a></li>
-                </ol>
+            <div class="col-xl-10 border-green">
+                <table class="table table-responsive-lg">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        <th scope="col">Handle</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-        </aside><!-- /.blog-sidebar -->
-    </div><!-- /.row -->
-    <footer th:replace="layout :: site-footer"></footer>
-</main><!-- /.container -->
+
+            <div class="col-xl-9 blog-main ">
+                <div class="blog-post">
+                    <h2 class="blog-post-title"><a></a>
+                    </h2>
+                    <p class="blog-post-meta"
+                    >18:08, 21 ноября
+                        2017</p>
+
+                    <p class="blog-post-body"></p>
+                    <hr>
+                </div>
+            </div><!-- /.blog-main -->
+
+            <aside class="col-xl-3 ml-sm-auto blog-sidebar">
+                <div class="sidebar-module">
+                    <h4>Архив</h4>
+                    <ol class="list-unstyled">
+                        <li><a>Ноябрь 2017</a></li>
+                    </ol>
+                </div>
+            </aside><!-- /.blog-sidebar -->
+        </div><!-- /.row -->
+        <footer></footer>
+</main>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" src="js/popper.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/vue.min.js"></script>
+
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/vue.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #CDEAD3;
+    background-color: #F5FFFA;
     color: #556A59;
 
 }
@@ -93,12 +93,6 @@ h6,
  */
 .row {
     margin: 0.9rem;
-}
-
-.blog-main {
-    margin-bottom: 3rem;
-    border: .2rem solid #5db770;
-    border-radius: 1rem;
 }
 
 .blog-header {
@@ -241,14 +235,15 @@ h6,
     color: #343a40;
 }
 
-.alert-success {
-    background-color: #CDEAD3;
+.border-green {
+    background-color: #F5FFFA;
     border: .2rem solid #5db770;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
-.alert-success:hover {
-    background-color: #5db770;
+.border-green > button:hover {
+    background-color: #CDEAD3;
     border: .2rem solid #5db770;
     border-radius: 1rem;
 
@@ -257,8 +252,3 @@ h6,
 .navbar {
     padding: 0;
 }
-
-.block-radius {
-    border-radius: .5rem;
-}
-
