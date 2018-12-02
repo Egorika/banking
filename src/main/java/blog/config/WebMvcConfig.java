@@ -1,3 +1,4 @@
+/*
 package blog.config;
 
 import org.springframework.context.annotation.Bean;
@@ -14,3 +15,4 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	}
 	
 }
+*/

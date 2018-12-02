@@ -36,16 +36,16 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String index(Model model) {
-		String user = SecurityContextHolder.getContext().getAuthentication().getName();
+		/*String user = SecurityContextHolder.getContext().getAuthentication().getName();
 		if (user != null) {
 			model.addAttribute("auth", user);
 		}
-		
+
 		List<Post> latest5Posts = postService.findTop5OrderByDate();
 		model.addAttribute("latest5posts", latest5Posts);
-		
+
 		List<Post> latest10Posts = postService.findTop10OrderByDate();
-		model.addAttribute("latest10posts", latest10Posts);
+		model.addAttribute("latest10posts", latest10Posts);*/
 		
 		return "index";
 	}

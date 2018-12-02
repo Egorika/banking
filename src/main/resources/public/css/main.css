@@ -252,3 +252,17 @@ h6,
 .navbar {
     padding: 0;
 }
+
+.block {
+    padding: 1rem;
+
+}
+
+table {
+    border-top: none;
+}
+
+.card {
+    background-color: #5db770 !important;
+}
+
