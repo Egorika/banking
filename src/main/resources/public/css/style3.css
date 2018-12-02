@@ -1,8 +1,8 @@
 /*
     DEMO STYLE
 */
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -13,7 +13,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #424248;
 }
 
 a,
@@ -47,6 +47,19 @@ a:focus {
 }
 
 /* ---------------------------------------------------
+    HEADER STYLE
+----------------------------------------------------- */
+header {
+    background-image: linear-gradient(to right, #5db770 , #33D57C);
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
@@ -57,7 +70,7 @@ a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #5db770;
+    background-image: linear-gradient(to right, #5db770 , #33D57C);
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -69,18 +82,19 @@ a:focus {
 }
 
 #dismiss {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 34px;
+    height: 32px;
+    line-height: 33px;
     text-align: center;
-    background: #5db770;
+    background: none;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
     cursor: pointer;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    border-radius: 50px;
 }
 
 #dismiss:hover {
@@ -98,6 +112,7 @@ a:focus {
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
+
 .overlay.active {
     display: block;
     opacity: 1;
@@ -105,7 +120,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #5db770;
+    background-image: linear-gradient(to right, #5db770 , #33D57C);
     font-family: 'Comfortaa', cursive;
     font-size: 50px;
 }
@@ -135,7 +150,7 @@ a:focus {
     fill: #5db770;
 }
 
-#sidebar ul li.active>a {
+#sidebar ul li.active > a {
     color: #fff;
     background: #5db770;
 }
@@ -143,6 +158,7 @@ a:focus {
 a[data-toggle="collapse"] {
     position: relative;
 }
+
 /*
 .dropdown-toggle::after {
     display: block;
@@ -181,10 +197,6 @@ a.article:hover {
     color: #fff !important;
 }
 
-.btn-success {
-    background-color: #5db770;
-}
-
 .icons {
     fill: #fff;
     width: 10%;
@@ -197,10 +209,32 @@ a.article:hover {
     margin-bottom: -6px;
 }
 
-.card {
-    background-color: rgba(93, 183, 112, 0.3);
+.credit-card {
+    background-color: rgba(93, 183, 112, 0.6);
 }
 
+.top-payment {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #5db770;
+    margin-bottom: 10px;
+}
+
+.top-payment p{
+    margin: 0;
+}
+
+p.payment-name {
+    font-weight: bold;
+}
+
+p.payment-description {
+    font-size: 0.8rem;
+}
+
+.btn-payment {
+    background-image: linear-gradient(to right, #5db770 , #33D57C);
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
