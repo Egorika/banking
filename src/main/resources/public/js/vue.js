@@ -1,36 +1,37 @@
 new Vue({
-    el: '#test',
+    el: '#today',
     data: {
-        categories: [],
-        table: []
+        now: null
     },
     mounted: function () {
-        axios.get('/product/all')
+        let day = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+
+        this.now = day + '.' + month + '.' + year;
+    },
+});
+
+
+new Vue({
+    el: '#exchange',
+    data: {
+        usd: null,
+        eur: null,
+        rub: null
+    },
+    mounted: function () {
+        axios.get('http://www.nbrb.by/API/ExRates/Rates/RUB?ParamMode=2')
             .then(response => {
-                this.categories = response.data;
+                this.rub = response.data;
+            });
+        axios.get('http://www.nbrb.by/API/ExRates/Rates/EUR?ParamMode=2')
+            .then(response => {
+                this.eur = response.data;
+            });
+        axios.get('http://www.nbrb.by/API/ExRates/Rates/USD?ParamMode=2')
+            .then(response => {
+                this.usd = response.data;
             });
     },
-    computed: {
-        credits: function () {
-            return this.categories.filter(product => product.type === 'CREDIT')
-        },
-        debits: function () {
-            return this.categories.filter(product => product.type === 'DEBIT')
-        },
-        tableExists: function () {
-            return this.table != null
-        }
-    },
-    methods: {
-        getAllByType: function (data, type) {
-            return this.data.filter(product => product.type === type)
-        },
-
-        creditTable: function () {
-            this.table = this.credits;
-        },
-        debitTable: function () {
-            this.table = this.debits;
-        }
-    }
 });

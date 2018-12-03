@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-<div class="container" id="test">
+<div class="container">
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div id="dismiss">
@@ -218,72 +218,8 @@
                         </button>
                     </div>
                 </nav>
-                <div>
-                    <nav class="navbar navbar-expand">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <button class="btn btn-success " type="button"
-                                            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                        Меню
-                                    </button>
-                                    <button class="btn btn-success " type="button" v-on:click="creditTable">
-                                        Кредит
-                                    </button>
-                                    <button class="btn btn-success " type="button" v-on:click="debitTable">
-                                        Дебит
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li>
-                                            <a class="dropdown-item " href="#">Кредит</a>
-                                            <ul class="dropdown-menu">
-                                                <li v-for="credit in credits">
-                                                    <a class="dropdown-item" href="#">{{ credit.title }}</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item " href="#">Дебит</a>
-                                            <ul class="dropdown-menu">
-                                                <li v-for="debit in debits">
-                                                    <a class="dropdown-item" href="#">{{ debit.title }}</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item " href="#">Меню 3го уровня</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Категория</a></li>
-                                                <li><a class="dropdown-item" href="#">Категория</a></li>
-                                                <li>
-                                                    <a class="dropdown-item " href="#">Подкатегория</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">Категория 1</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">Категория 2</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item " href="#">Подкатегория 2</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">Категория 3</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">Категория 4</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-2 mx-auto text-light">
-                    <a>Сегодня</a>
+                <div class="col-2 d-none d-xl-block my-auto text-light" id="today">
+                    <a>Сегодня {{ now }}</a>
                 </div>
             </div>
         </header>
@@ -351,31 +287,32 @@
                 <div class="row">
                     <div class="col-sm m-2">
                         <div class="my-3 mx-4">
-                            <div class="row">
-                                <p>Курсы валют</p>
+                            <div class="row mx-auto" id="exchange">
+                                <div class="row">
+                                    <p>Курсы валют</p>
+                                </div>
+                                <table class="table row">
+                                    <tr>
+                                        <td>{{ usd.Cur_Abbreviation }}</td>
+                                        <td>{{ usd.Cur_Scale }}</td>
+                                        <td>{{ usd.Cur_OfficialRate }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ eur.Cur_Abbreviation }}</td>
+                                        <td>{{ eur.Cur_Scale }}</td>
+                                        <td>{{ eur.Cur_OfficialRate }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ rub.Cur_Abbreviation }}</td>
+                                        <td>{{ rub.Cur_Scale }}</td>
+                                        <td>{{ rub.Cur_OfficialRate }}</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="shadow p-2 m-2 bg-white rounded" v-if="table.length">
-            <table class="table table-responsive-lg p-3">
-                <thead>
-                <tr>
-                    <th scope="col">Название</th>
-                    <th scope="col">Описание</th>
-                    <th scope="col">Ставка</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="value in table">
-                    <td>{{ value.title }}</td>
-                    <td>{{ value.type }}</td>
-                </tr>
-                </tbody>
-            </table>
         </div>
         <div class="col-xl-9 blog-main ">
             <div class="blog-post">
