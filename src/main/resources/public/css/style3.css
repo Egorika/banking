@@ -210,7 +210,7 @@ a.article:hover {
 }
 
 .credit-card {
-    background-color: rgba(93, 183, 112, 0.6);
+    background-color: rgba(51, 213, 124, 0.6);
 }
 
 .top-payment {
@@ -236,6 +236,20 @@ p.payment-description {
     background-image: linear-gradient(to right, #5db770 , #33D57C);
 }
 
+.exchange {
+    height: 250px;
+}
+
+.balance {
+    font-size: 2.5rem;
+    color: #5db770;
+    font-family: 'Comfortaa', serif;
+}
+
+.border-green {
+    border: .1rem solid #5db770;
+    border-radius: .75rem;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
