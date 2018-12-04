@@ -5,7 +5,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background-image: url("../img/back.jpg");
+    background-size: cover;
 }
 
 p {
@@ -50,7 +51,7 @@ a:focus {
     HEADER STYLE
 ----------------------------------------------------- */
 header {
-    background-image: linear-gradient(to right, #5db770 , #33D57C);
+    background: #5db770;
 }
 
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
@@ -70,7 +71,7 @@ header {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background-image: linear-gradient(to right, #5db770 , #33D57C);
+    background: #5db770;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -120,7 +121,7 @@ header {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background-image: linear-gradient(to right, #5db770 , #33D57C);
+    background: #5db770;
     font-family: 'Comfortaa', cursive;
     font-size: 50px;
 }
@@ -233,7 +234,7 @@ p.payment-description {
 }
 
 .btn-payment {
-    background-image: linear-gradient(to right, #5db770 , #33D57C);
+    background: #5db770;
 }
 
 .exchange {
