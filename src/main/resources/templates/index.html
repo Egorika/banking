@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
@@ -212,23 +212,20 @@
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-light col">
                     <div class="container-fluid">
-                        <button type="button" id="sidebarCollapse" class="btn btn-success">
+                        <button type="button" id="sidebarCollapse" class="btn btn-success btn-payment">
                             <i class="fas fa-align-left"></i>
                             <span>Меню</span>
                         </button>
                     </div>
                 </nav>
-                <div class="col-2 d-none d-xl-block my-auto text-light" id="today">
-                    <a>Сегодня {{ now }}</a>
-                </div>
             </div>
         </header>
     </div>
     <main class="container">
         <div class="row mx-0">
-            <div class="col-sm shadow p-2 m-2 rounded bg-white">
+            <div class="col-sm shadow p-2 m-2 bg-white rounded">
                 <div class="row">
-                    <div class="col-sm my-3 mx-4 credit-card rounded">
+                    <div class="col-sm my-4 mx-4 border-green-shadow">
                         <div class="mb-2 mt-3 mx-1">
                             <a>Зарплатная карта</a>
                             <p>**** **** **** 1234</p>
@@ -239,14 +236,15 @@
                         <div class="my-2 mx-1">
                             <p>Баланс</p>
                             <p class="h3 balance">8 123.00</p>
+                            <button class="btn btn-outline-success btn-block">Перевод</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm shadow p-2 m-2 rounded bg-white">
+            <div class="col-sm shadow p-2 m-2 bg-white rounded">
                 <div class="row">
-                    <div class="col-sm my-3 mx-4 credit-card rounded">
+                    <div class="col-sm my-4 mx-4 border-green-shadow">
                         <div class="mb-2 mt-3 mx-1">
                             <a>Зарплатная карта</a>
                             <p>**** **** **** 1234</p>
@@ -257,6 +255,7 @@
                         <div class="my-2 mx-1">
                             <p>Баланс</p>
                             <p class="h3 balance">8 123.00</p>
+                            <button class="btn btn-outline-success btn-block">Перевод</button>
                         </div>
                     </div>
                 </div>
@@ -271,83 +270,40 @@
                             <div class="row">
                                 <p>Избранные платежи</p>
                             </div>
-                            <div class="top-payment row border-green">
+                            <div class="border-green-shadow row">
                                 <div class="col-sm py-2">
                                     <p class="payment-name">Домашний</p>
                                     <p class="payment-description">Телефон: 201-73-87</p>
                                 </div>
                                 <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
+                                    <button class="btn btn-outline-success">Оплатить</button>
                                 </div>
                             </div>
-
-                            <div class="top-payment row border-green">
+                            <div class="border-green-shadow row">
                                 <div class="col-sm py-2">
                                     <p class="payment-name">Домашний</p>
                                     <p class="payment-description">Телефон: 201-73-87</p>
                                 </div>
                                 <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
+                                    <button class="btn btn-outline-success">Оплатить</button>
                                 </div>
                             </div>
-
-                            <div class="top-payment row border-green">
+                            <div class="border-green-shadow row">
                                 <div class="col-sm py-2">
                                     <p class="payment-name">Домашний</p>
                                     <p class="payment-description">Телефон: 201-73-87</p>
                                 </div>
                                 <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
+                                    <button class="btn btn-outline-success">Оплатить</button>
                                 </div>
                             </div>
-
-                            <div class="top-payment row border-green">
+                            <div class="border-green-shadow row">
                                 <div class="col-sm py-2">
                                     <p class="payment-name">Домашний</p>
                                     <p class="payment-description">Телефон: 201-73-87</p>
                                 </div>
                                 <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
-                                </div>
-                            </div>
-
-                            <div class="top-payment row border-green">
-                                <div class="col-sm py-2">
-                                    <p class="payment-name">Домашний</p>
-                                    <p class="payment-description">Телефон: 201-73-87</p>
-                                </div>
-                                <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
-                                </div>
-                            </div>
-
-                            <div class="top-payment row border-green">
-                                <div class="col-sm py-2">
-                                    <p class="payment-name">Домашний</p>
-                                    <p class="payment-description">Телефон: 201-73-87</p>
-                                </div>
-                                <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
-                                </div>
-                            </div>
-
-                            <div class="top-payment row border-green">
-                                <div class="col-sm py-2">
-                                    <p class="payment-name">Домашний</p>
-                                    <p class="payment-description">Телефон: 201-73-87</p>
-                                </div>
-                                <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
-                                </div>
-                            </div>
-
-                            <div class="top-payment row border-green">
-                                <div class="col-sm py-2">
-                                    <p class="payment-name">Домашний</p>
-                                    <p class="payment-description">Телефон: 201-73-87</p>
-                                </div>
-                                <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-success btn-payment">Оплатить</button>
+                                    <button class="btn btn-outline-success">Оплатить</button>
                                 </div>
                             </div>
                         </div>
@@ -355,8 +311,8 @@
                 </div>
             </div>
 
-            <div class="shadow p-2 m-2 bg-white rounded col-sm-4 mh-25 exchange">
-                <div class="row">
+            <div class="col-sm-4 px-0">
+                <div class="row shadow p-2 m-2 bg-white rounded mh-25 exchange">
                     <div class="col-sm m-2">
                         <div class="my-3 mx-4">
                             <div class="row mx-auto" id="exchange">
@@ -386,31 +342,31 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-9 blog-main ">
-            <div class="blog-post">
-                <h2 class="blog-post-title"><a></a>
-                </h2>
-                <p class="blog-post-meta"
-                >18:08, 21 ноября
-                    2017
-                </p>
-                <p class="blog-post-body"></p>
-                <hr>
-            </div>
-        </div>
-        <!-- /.blog-main -->
-        <aside class="col-xl-3 ml-sm-auto blog-sidebar">
-            <div class="sidebar-module">
-                <h4>Архив</h4>
-                <ol class="list-unstyled">
-                    <li><a>Ноябрь 2017</a></li>
-                </ol>
-            </div>
-        </aside>
-        <!-- /.blog-sidebar -->
     </main>
+    <div class="container">
+        <footer class="py-1 mx-2 mt-2 mb-3 rounded">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-1"><a href="#"><img class="socials" src="img/facebook.png"/></a></div>
+                <div class="col-sm-1"><a href="#"><img class="socials" src="img/twitter.png"/></a></div>
+                <div class="col-sm-1"><a href="#"><img class="socials" src="img/instagram.png"/></a></div>
+                <div class="col-sm-1"><a href="#"><img class="socials" src="img/sharethis.png"/></a></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a
+                        Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp,
+                        Minneapolis,
+                        MN]</p>
+                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com"
+                                                              target="_blank">Sunlimetech</a></p>
+                </div>
+                </hr>
+            </div>
+        </footer>
+    </div>
+
 </div>
-<footer></footer>
+
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>

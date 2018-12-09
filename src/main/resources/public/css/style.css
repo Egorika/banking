@@ -2,10 +2,11 @@
     DEMO STYLE
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("../img/back.jpg");
+    background-image: url("../img/back-blur.jpg");
     background-size: cover;
 }
 
@@ -53,12 +54,12 @@ a:focus {
 header {
     background: #5db770;
 }
-
+/*
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
     border: none !important;
     background-color: transparent !important;
     box-shadow: none !important;
-}
+}*/
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -211,17 +212,19 @@ a.article:hover {
 }
 
 .credit-card {
-    background-color: rgba(51, 213, 124, 0.6);
+    border: 1px solid #5db770;
+    border-radius: .5rem !important;
 }
 
-.top-payment {
+.border-green-shadow {
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 2px solid #5db770;
-    margin-bottom: 10px;
+    box-shadow: 0 0 0 0.2rem rgba(40,167,69,.5);
+    border-radius: .5rem !important;
+    margin-bottom: 15px;
 }
 
-.top-payment p{
+.border-green-shadow p{
     margin: 0;
 }
 
@@ -234,8 +237,14 @@ p.payment-description {
 }
 
 .btn-payment {
-    background: #5db770;
+    background: #5db770 !important;
+    border: none !important;
+    box-shadow: none !important;
 }
+
+/*.btn-payment:hover {
+    background: #5db770 !important;
+}*/
 
 .exchange {
     height: 250px;
@@ -248,8 +257,16 @@ p.payment-description {
 }
 
 .border-green {
-    border: .1rem solid #5db770;
+    border: 1px solid #5db770;
     border-radius: .75rem;
+}
+
+footer {
+    background: #5db770;
+}
+
+.socials {
+    width: 50%;
 }
 /* ---------------------------------------------------
     CONTENT STYLE
