@@ -260,13 +260,46 @@ p.payment-description {
     border-radius: .75rem;
 }
 
-footer {
+.footerBlock {
+    padding: 2% 10% 1% 10%;
+    display: flex;
+    flex-direction: row;
     background: #5db770;
 }
 
-.socials {
-    width: 50%;
+.footer-block-logo {
+    height: 100%;
 }
+
+.logo {
+    text-align: center;
+}
+.logo img {
+    margin: 0 auto;
+}
+
+.socials {
+    max-width: 60%;
+}
+
+.social-contacts-item img{
+    width: 80%;
+}
+
+.social-contacts p {
+    font-size: 120%;
+}
+
+
+.footer-information {
+    font-size: 120%;
+    text-align: right;
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
