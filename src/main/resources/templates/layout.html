@@ -1,52 +1,241 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="site-head">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="БАНК">
-    <meta name="author" content="">
-
-    <title>БАНК</title>
-
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          th:href="@{'http://netdna.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'}">
-    <link href="../public/css/main.css" th:href="@{/css/main.css}" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"
-            th:src="@{'https://code.jquery.com/jquery-3.3.1.min.js'}"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"
-            th:src="@{'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'}"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"
-            th:src="@{'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'}"></script>
-
-    <script src="../public/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>банкинг</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header th:fragment="site-header" th:remove="tag">
-    <header>
-        <div class="blog-masthead">
-            <div class="container">
-                <nav class="nav">
-                    <a class="nav-link active" th:href="@{'/'}">Главная</a>
-                    <a class="nav-link" th:href="@{'/admin/panel'}">Архив</a>
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="sidebar-header">
+            <h3>
+                <svg class="icon-main" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 470 470" style="enable-background:new 0 0 470 470;" xml:space="preserve">
+                     <g>
+                        <g>
+                           <path d="M252.5,223h-34.9c-14.5,0-26.3-11.8-26.3-26.3s11.8-26.3,26.3-26.3h61.6c6.6,0,12-5.4,12-12s-5.4-12-12-12h-32.1v-24.5
+                              c0-6.6-5.4-12-12-12s-12,5.4-12,12v24.5h-5.5c-27.7,0-50.3,22.6-50.3,50.3s22.6,50.3,50.3,50.3h34.9c14.5,0,26.3,11.8,26.3,26.3
+                              s-11.8,26.3-26.3,26.3h-62.7c-6.6,0-12,5.4-12,12s5.4,12,12,12H223v25c0,6.6,5.4,12,12,12s12-5.4,12-12v-25h5.8c0.1,0,0.2,0,0.3,0
+                              c27.4-0.4,49.6-22.8,49.6-50.3C302.7,245.5,280.2,223,252.5,223z"></path>
+                           <path d="M401.2,68.8C356.8,24.4,297.8,0,235,0S113.2,24.4,68.8,68.8S0,172.2,0,235s24.4,121.8,68.8,166.2S172.2,470,235,470
+                              s121.8-24.4,166.2-68.8S470,297.8,470,235S445.6,113.2,401.2,68.8z M235,446c-116.3,0-211-94.7-211-211S118.7,24,235,24
+                              s211,94.7,211,211S351.3,446,235,446z"></path>
+                        </g>
+                     </g>
+                  </svg>
+                банкинг
+            </h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="/">
+                    <svg class="icons" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 478.4 478.4" style="enable-background:new 0 0 478.4 478.4;" xml:space="preserve">
+                        <g>
+                           <g>
+                              <path d="M466.4,24.5H12c-6.6,0-12,5.4-12,12v321.8c0,6.6,5.4,12,12,12h215.2V430H142c-6.6,0-12,5.4-12,12s5.4,12,12,12h194.4
+                                 c6.6,0,12-5.4,12-12s-5.4-12-12-12h-85.2v-59.7h215.2c6.6,0,12-5.4,12-12V36.5C478.4,29.9,473.1,24.5,466.4,24.5z M454.4,346.3H24
+                                 V48.5h430.5v297.8H454.4z"></path>
+                              <path d="M224.6,213.1h30.8c12,0,21.8,9.8,21.8,21.8s-9.8,21.8-21.8,21.8H200c-6.6,0-12,5.4-12,12s5.4,12,12,12h28v20.6
+                                 c0,6.6,5.4,12,12,12s12-5.4,12-12v-20.6h3.7c0.1,0,0.2,0,0.3,0c25-0.3,45.2-20.8,45.2-45.8c0-25.3-20.5-45.8-45.8-45.8h-30.8
+                                 c-12,0-21.8-9.8-21.8-21.8s9.8-21.8,21.8-21.8H279c6.6,0,12-5.4,12-12s-5.4-12-12-12h-27v-20.3c0-6.6-5.4-12-12-12s-12,5.4-12,12
+                                 v20.3h-3.4c-25.3,0-45.8,20.5-45.8,45.8C178.8,192.6,199.3,213.1,224.6,213.1z"></path>
+                           </g>
+                        </g>
+                     </svg>
+                    Мой банк
+                </a>
+                <a href="#">
+                    <svg class="icons" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+                        <g>
+                           <g>
+                              <path d="M265.2,350.3H33.6c-5.3,0-9.6-4.3-9.6-9.6V158.1h408.5v24c0,6.6,5.4,12,12,12s12-5.4,12-12V95.6
+                                 c0-18.5-15.1-33.6-33.6-33.6H33.6C15,62,0,77.1,0,95.6v245.1c0,18.5,15.1,33.6,33.6,33.6h231.7c6.6,0,12-5.4,12-12
+                                 S271.9,350.3,265.2,350.3z M33.6,86h389.3c5.3,0,9.6,4.3,9.6,9.6v38.5H23.9V95.6C23.9,90.3,28.3,86,33.6,86z"></path>
+                              <path d="M240.2,247.2c0-6.6-5.4-12-12-12H84c-6.6,0-12,5.4-12,12s5.4,12,12,12h144.2C234.9,259.2,240.2,253.8,240.2,247.2z"></path>
+                              <path d="M84,278.2c-6.6,0-12,5.4-12,12s5.4,12,12,12h57.7c6.6,0,12-5.4,12-12s-5.4-12-12-12H84z"></path>
+                              <path d="M82.6,215.7h144.2c6.6,0,12-5.4,12-12s-5.4-12-12-12H82.6c-6.6,0-12,5.4-12,12S75.9,215.7,82.6,215.7z"></path>
+                              <path d="M476.3,298.3h-17.6v-28c0-34.7-28.3-63-63-63s-63,28.3-63,63v28h-17.6c-6.6,0-12,5.4-12,12v104c0,6.6,5.4,12,12,12h161.1
+                                 c6.6,0,12-5.4,12-12v-104C488.3,303.6,482.9,298.3,476.3,298.3z M356.7,270.2c0-21.5,17.5-39,39-39s39,17.5,39,39v28h-78V270.2z
+                                 M464.3,402.2H327.1v-80h137.1L464.3,402.2L464.3,402.2z"></path>
+                           </g>
+                        </g>
+                     </svg>
+                    Карты
+                </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <svg class="icons" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 482.1 482.1" style="enable-background:new 0 0 482.1 482.1;" xml:space="preserve">
+                        <g>
+                           <g>
+                              <path d="M462,374.8l-83.7,74.8h-99.1v-24.4h96.4c3,0,5.8-1.1,8-3.1L478,337c4.9-4.4,5.3-12,0.9-16.9s-12-5.3-16.9-0.9l-91,82.1
+                                 h-91.8v-24.4h84.9c3,0,5.9-1.1,8.1-3.1l106-96.7c3.7-3.3,4.9-8.6,3.1-13.2s-6.2-7.7-11.2-7.7H117.9c-3,0-5.9,1.1-8.1,3.1L3.9,356
+                                 c-3.7,3.3-4.9,8.6-3.1,13.2s6.2,7.7,11.2,7.7h100.3v24.4H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100.3v24.4H12c-6.6,0-12,5.4-12,12
+                                 s5.4,12,12,12h112.3h143H383c3,0,5.8-1.1,8-3.1l87.1-77.9c4.9-4.4,5.4-12,0.9-16.9C474.5,370.8,466.9,370.4,462,374.8z M331,280.1
+                                 l-79.7,72.7h-98.7l79.7-72.7L331,280.1L331,280.1z M359.4,352.9h-72.5l79.7-72.7h72.5L359.4,352.9z M122.6,280.1h74l-79.7,72.7
+                                 h-74L122.6,280.1z M136.2,449.6v-72.7h119v72.7L136.2,449.6L136.2,449.6z"></path>
+                              <path d="M227.3,129.1h29.9c11.4,0,20.7,9.3,20.7,20.7s-9.3,20.7-20.7,20.7h-53.6c-6.6,0-12,5.4-12,12s5.4,12,12,12h26.7v19.6
+                                 c0,6.6,5.4,12,12,12s12-5.4,12-12v-19.6h3.2c0.1,0,0.2,0,0.3,0c24.4-0.3,44.1-20.3,44.1-44.7c0-24.7-20.1-44.7-44.7-44.7h-29.9
+                                 c-11.4,0-20.7-9.3-20.7-20.7s9.3-20.7,20.7-20.7H280c6.6,0,12-5.4,12-12s-5.4-12-12-12h-25.7V20.4c0-6.6-5.4-12-12-12
+                                 s-12,5.4-12,12v19.2h-2.9c-24.7,0-44.7,20.1-44.7,44.7S202.6,129.1,227.3,129.1z"></path>
+                           </g>
+                        </g>
+                     </svg>
+                    Платежи
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/credit">
+                    <svg class="icons" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 485 485" style="enable-background:new 0 0 485 485;" xml:space="preserve">
+                        <g>
+                           <g>
+                              <path d="M261.9,158.8h32c12.7,0,23.1,10.3,23.1,23.1S306.7,205,293.9,205c-0.2,0-0.3,0-0.5,0s-0.3,0-0.5,0h-56.4
+                                 c-6.6,0-12,5.4-12,12s5.4,12,12,12H266v21.9c0,6.6,5.4,12,12,12s12-5.4,12-12V229h2.9c0.2,0,0.3,0,0.5,0s0.3,0,0.5,0
+                                 c26,0,47.1-21.1,47.1-47.1s-21.1-47.1-47.1-47.1h-32c-12.7,0-23.1-10.3-23.1-23.1s10.3-23.1,23.1-23.1h56.4c6.6,0,12-5.4,12-12
+                                 s-5.4-12-12-12h-28.4V43.2c0-6.6-5.4-12-12-12s-12,5.4-12,12v21.5h-4c-26,0-47.1,21.1-47.1,47.1
+                                 C214.8,137.7,235.9,158.8,261.9,158.8z"></path>
+                              <path d="M145,318.4h268.9c29.7,0,53.8-24.2,53.8-53.8V151.3c0-6.6-5.4-12-12-12s-12,5.4-12,12v113.2c0,16.5-13.4,29.8-29.8,29.8
+                                 H145c-16.5,0-29.8-13.4-29.8-29.8v-66.7v-74.6v-9.7V43.3c0-0.4,0-0.9-0.1-1.3c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.6-0.1-0.8
+                                 s-0.1-0.5-0.2-0.7c0-0.1-0.1-0.3-0.1-0.4c-0.1-0.3-0.2-0.5-0.3-0.8c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.2-0.2-0.5-0.3-0.7
+                                 c-0.1-0.1-0.1-0.2-0.2-0.4s-0.2-0.4-0.3-0.6c-0.1-0.1-0.2-0.3-0.3-0.4c-0.1-0.1-0.2-0.3-0.3-0.4c-0.1-0.2-0.3-0.4-0.4-0.5
+                                 s-0.2-0.2-0.3-0.3c-0.2-0.2-0.3-0.4-0.5-0.6c-0.1-0.1-0.2-0.2-0.3-0.2c-0.2-0.2-0.4-0.4-0.6-0.5c-0.1-0.1-0.2-0.2-0.3-0.2
+                                 c-0.2-0.2-0.4-0.3-0.6-0.4c-0.2-0.2-0.5-0.3-0.7-0.4c-0.1-0.1-0.2-0.1-0.3-0.2c-0.4-0.2-0.8-0.4-1.1-0.6L33.9,1
+                                 c-6.1-2.6-13.1,0.3-15.7,6.4c-2.6,6,0.3,13.1,6.4,15.7l66.5,28.1v62.3v9.7v74.6v66.7v84.3c0,28.2,21.7,51.3,49.3,53.6
+                                 c-5.6,8.4-8.9,18.5-8.9,29.4c0,29.3,23.9,53.2,53.2,53.2s53.2-23.9,53.2-53.2c0-10.8-3.2-20.8-8.7-29.2h127.3
+                                 c-5.5,8.4-8.7,18.4-8.7,29.2c0,29.3,23.9,53.2,53.2,53.2s53.2-23.9,53.2-53.2s-23.9-53.2-53.2-53.2H145
+                                 c-16.5,0-29.8-13.4-29.8-29.8v-39.5C123.7,315,134,318.4,145,318.4z M213.9,431.8c0,16.1-13.1,29.2-29.2,29.2
+                                 s-29.2-13.1-29.2-29.2s13.1-29.2,29.2-29.2S213.9,415.7,213.9,431.8z M430.1,431.8c0,16.1-13.1,29.2-29.2,29.2
+                                 s-29.2-13.1-29.2-29.2s13.1-29.2,29.2-29.2S430.1,415.7,430.1,431.8z"></path>
+                           </g>
+                        </g>
+                     </svg>
+                    Кредиты
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="icons" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 472 472" style="enable-background:new 0 0 472 472;" xml:space="preserve">
+                        <g>
+                           <g>
+                              <path d="M448.7,187.6l-34.2-5.8c-3.5-11.6-8.2-22.9-14-33.7l20.1-28.2c8-11.2,6.7-26.3-3-36l-29.5-29.5
+                                 c-5.3-5.3-12.3-8.2-19.8-8.2c-5.8,0-11.4,1.8-16.2,5.2l-28.3,20.1c-11.1-5.9-22.7-10.7-34.8-14.3l-5.7-33.8
+                                 C281.2,9.8,269.6,0,255.9,0h-41.8c-13.7,0-25.3,9.8-27.6,23.3l-5.9,34.5C169,61.4,157.7,66.2,147,72l-27.9-19.9
+                                 c-4.8-3.4-10.4-5.2-16.2-5.2c-7.5,0-14.5,2.9-19.8,8.2L53.6,84.6c-9.7,9.7-11,24.8-3,36l20.3,28.6c-5.7,10.8-10.3,22.1-13.7,33.8
+                                 l-33.8,5.7C9.8,190.9,0,202.4,0,216.1v41.8c0,13.7,9.8,25.3,23.3,27.6l34.5,5.9C61.4,303,66.1,314.3,72,325l-19.9,27.9
+                                 c-8,11.2-6.7,26.3,3,36l29.5,29.5c5.3,5.3,12.3,8.2,19.8,8.2c5.8,0,11.4-1.8,16.2-5.2l28.6-20.3c10.4,5.5,21.4,10,32.6,13.4
+                                 l5.7,34.1c2.3,13.5,13.9,23.3,27.6,23.3h41.8c13.7,0,25.3-9.8,27.6-23.3l5.8-34.2c11.6-3.5,22.9-8.2,33.7-14l28.2,20.1
+                                 c4.8,3.4,10.4,5.2,16.2,5.2l0,0c7.5,0,14.5-2.9,19.8-8.2l29.5-29.5c9.7-9.7,11-24.8,3-36l-20.1-28.3c5.8-10.8,10.4-22,14-33.7
+                                 l34.1-5.7c13.5-2.3,23.3-13.9,23.3-27.6v-41.8C472,201.6,462.2,189.9,448.7,187.6z M448,257c0,1.9-1.4,3.6-3.3,3.9l-41.6,7
+                                 c-4.7,0.8-8.5,4.2-9.6,8.8c-3.8,14.7-9.6,28.8-17.4,41.9c-2.4,4.1-2.2,9.2,0.5,13.1l24.5,34.5c1.1,1.6,0.9,3.7-0.4,5.1l-29.5,29.5
+                                 c-1,1-2.2,1.2-2.8,1.2c-0.6,0-1.4-0.1-2.3-0.7l-34.4-24.5c-3.9-2.8-9-3-13.1-0.6c-13.1,7.8-27.2,13.6-41.9,17.4
+                                 c-4.6,1.2-8,4.9-8.8,9.6l-7.1,41.7c-0.3,1.9-2,3.3-3.9,3.3h-41.8c-1.9,0-3.6-1.4-3.9-3.3l-7-41.6c-0.8-4.7-4.2-8.5-8.8-9.6
+                                 c-14.3-3.7-28.1-9.4-41-16.8c-1.9-1.1-4-1.6-6-1.6c-2.4,0-4.9,0.7-6.9,2.2l-34.7,24.6c-0.9,0.6-1.7,0.7-2.3,0.7
+                                 c-0.6,0-1.8-0.2-2.8-1.2L72,372c-1.4-1.4-1.6-3.5-0.4-5.1L96,332.6c2.8-3.9,3-9,0.5-13.1c-7.8-13-13.8-27.1-17.6-41.8
+                                 c-1.2-4.5-5-8-9.6-8.8l-42-7.1c-1.9-0.3-3.3-2-3.3-3.9v-41.8c0-1.9,1.4-3.6,3.3-3.9l41.4-6.9c4.7-0.8,8.5-4.3,9.7-8.9
+                                 c3.7-14.7,9.4-28.8,17.1-42c2.4-4.1,2.1-9.1-0.6-13l-24.6-34.7c-1.1-1.6-0.9-3.7,0.4-5.1l29.4-29.6c1-1,2.2-1.2,2.8-1.2
+                                 c0.6,0,1.4,0.1,2.3,0.7L139.4,96c3.9,2.8,9,3,13.1,0.5c13-7.8,27.1-13.8,41.8-17.6c4.5-1.2,8-5,8.8-9.6l7.1-42
+                                 c0.3-1.9,2-3.3,3.9-3.3h41.8c1.9,0,3.6,1.4,3.9,3.3l6.9,41.4c0.8,4.7,4.3,8.5,8.9,9.7c15.1,3.8,29.5,9.7,42.9,17.6
+                                 c4.1,2.4,9.2,2.2,13.1-0.5L366.1,71c0.9-0.6,1.7-0.7,2.3-0.7c0.6,0,1.8,0.2,2.8,1.2l29.5,29.5c1.4,1.4,1.6,3.5,0.4,5.1l-24.5,34.4
+                                 c-2.8,3.9-3,9-0.6,13.1c7.8,13.1,13.6,27.2,17.4,41.9c1.2,4.6,4.9,8,9.6,8.8l41.7,7.1c1.9,0.3,3.3,2,3.3,3.9L448,257L448,257z"></path>
+                              <path d="M252.8,223.9h-33.7c-13.7,0-24.9-11.2-24.9-24.9s11.2-24.9,24.9-24.9h59.4c6.6,0,12-5.4,12-12s-5.4-12-12-12H248v-23.2
+                                 c0-6.6-5.4-12-12-12s-12,5.4-12,12v23.2h-4.8c-27,0-48.9,21.9-48.9,48.9s21.9,48.9,48.9,48.9h33.7c13.7,0,24.9,11.2,24.9,24.9
+                                 c0,13.7-11.2,24.9-24.9,24.9h-60.5c-6.6,0-12,5.4-12,12s5.4,12,12,12H224v23.6c0,6.6,5.4,12,12,12s12-5.4,12-12v-23.6h5.2
+                                 c0.1,0,0.2,0,0.3,0c26.7-0.3,48.3-22.2,48.3-48.9C301.8,245.8,279.8,223.9,252.8,223.9z"></path>
+                           </g>
+                        </g>
+                     </svg>
+                    Настройки
+                </a>
+            </li>
+        </ul>
+        <!--<ul class="list-unstyled CTAs">
+           <li>
+               <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+           </li>
+           <li>
+               <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+           </li>
+           </ul>-->
+    </nav>
+    <div class="container">
+        <header class="py-1 mx-2 mt-2 mb-3 rounded">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light col">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-success btn-payment">
+                            <i class="fas fa-align-left"></i>
+                            <span class="header-menu-span">Меню</span>
+                        </button>
+                    </div>
                 </nav>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 </header>
-<h1>Welcome</h1>
-<p>Welcome to the Spring MVC Blog.</p>
-<footer th:fragment="site-footer">
-    <p>TO-DO: добавить иконки соц-сетей</p>
-    <p>
-        <a href="#">Наверх</a>
-    </p>
-</footer>
+
+<div th:fragment="site-script" th:remove="tag">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+    <script src="https://unpkg.com/lodash@4.16.0"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</div>
+
 </body>
 </html>
