@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head"></head>
+
+<body>
+<div class="container">
+    <header th:replace="layout :: site-header"></header>
+    <main class="container">
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="mx-4">
+                            <div class="credit-title row">
+                                <div class="col-sm">
+                                    <p class="content-title">Произвольный платеж</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="my-3 mx-4 col-sm-8">
+                            <form>
+                                <div class="form-group">
+                                    <label for="1">Получатель</label>
+                                    <input type="text" class="form-control" id="1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="2">Счет получателя</label>
+                                    <input type="text" class="form-control" id="2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="3">BIC банка получателя</label>
+                                    <input type="text" class="form-control" id="3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="4">УНП получателя</label>
+                                    <input type="text" class="form-control" id="4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="5">ФИО отправителя</label>
+                                    <input type="text" class="form-control" id="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="6">Адрес отправителя</label>
+                                    <input type="text" class="form-control" id="6">
+                                </div>
+                                <div class="form-group">
+                                    <label for="7">Код платежа бюджет</label>
+                                    <input type="text" class="form-control" id="7">
+                                </div>
+                                <div class="form-group">
+                                    <label for="8">Назначение платежа</label>
+                                    <input type="text" class="form-control" id="8">
+                                </div>
+                                <div class="form-group">
+                                    <label for="9">Сумма платежа</label>
+                                    <input type="text" class="form-control" id="9">
+                                </div>
+                                <button type="submit" class="btn btn-outline-success btn-lg mt-3">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <footer class="py-1 mx-2 mt-2 mb-3 rounded footerBlock">
+            <div class="social-contacts col-sm-8">
+
+                <div class="row h-25 mb-2"><p>Follow us:</p></div>
+                <div class="row socials">
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/instagram.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/sharethis.png">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-information col-sm-4">
+                +7 ### ###-##-##<br>+7 ### ###-##-##<br><br>
+                Our Address<br>
+                Our website<br>
+
+            </div>
+        </footer>
+    </div>
+
+</div>
+<div th:replace="layout :: site-script"></div>
+</body>
+</html>

@@ -6,38 +6,19 @@
     <header th:replace="layout :: site-header"></header>
     <main class="container">
         <div class="row mx-0">
-            <div class="col-sm shadow p-2 m-2 bg-white rounded">
+            <div class="col-sm shadow p-2 m-2 bg-white rounded" th:each="card : ${cards}">
                 <div class="row">
                     <div class="col-sm my-4 mx-4 border-green-shadow credit-card">
                         <div class="mb-2 mt-3 mx-1">
-                            <a>Зарплатная карта</a>
-                            <p>**** **** **** 1234</p>
-                            <p class="mt-3">Master Card</p>
+                            <a th:utext="*{card.title}">Зарплатная карта</a>
+                            <p th:utext="*{card.number}">**** **** **** 1234</p>
+                            <p class="mt-3" th:utext="*{card.cardType}">Master Card</p>
                         </div>
                     </div>
                     <div class="col-sm m-3">
                         <div class="my-2 mx-1">
                             <p>Баланс</p>
-                            <p class="h3 balance">8 250.00</p>
-                            <button class="btn btn-outline-success btn-block">Перевод</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm shadow p-2 m-2 bg-white rounded">
-                <div class="row">
-                    <div class="col-sm my-4 mx-4 border-green-shadow">
-                        <div class="mb-2 mt-3 mx-1">
-                            <a>Кредитная карта</a>
-                            <p>**** **** **** 1234</p>
-                            <p class="mt-3">Visa</p>
-                        </div>
-                    </div>
-                    <div class="col-sm m-3">
-                        <div class="my-2 mx-1">
-                            <p>Баланс</p>
-                            <p class="h3 balance">483.00</p>
+                            <p class="h3 balance" th:utext="*{#numbers.formatDecimal(card.money, 0, 2, 'POINT')}">8 250.00</p>
                             <button class="btn btn-outline-success btn-block">Перевод</button>
                         </div>
                     </div>

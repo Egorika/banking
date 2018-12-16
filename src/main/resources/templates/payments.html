@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head"></head>
+
+<body>
+<div class="container">
+    <header th:replace="layout :: site-header"></header>
+    <main class="container">
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="mx-4">
+                            <div class="credit-title row">
+                                <div class="col-sm">
+                                    <p class="content-title">Оплата услуг</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="my-3 mx-1 p-0 col-sm-8">
+                            <h4 class="payment-title">Популярные платежи:</h4>
+                            <div class="first_list row">
+                                <ul class="list col-sm ml-5">
+                                    <li>Velcom</li>
+                                    <li>MTC</li>
+                                    <li>Life:)</li>
+                                    <li>Белтелеком (дом.тел, byfly, zala)</li>
+                                    <li>Интернет, кабельное ТВ</li>
+                                    <li>Благотворительные платежи</li>
+                                    <li>Кредиты Белинвестбанка</li>
+                                </ul>
+
+                                <ul class="list col-sm ml-5">
+                                    <li>Кредиты банков (финансовые услуги)</li>
+                                    <li>Электронные деньги</li>
+                                    <li>Плата за образование/обучение</li>
+                                    <li>БГУ</li>
+                                    <li>Договорные платежи</li>
+                                </ul>
+                            </div>
+
+                            <h4 class="payment-title mt-2">Платежи ЕРИП:</h4>
+                            <div class="first_list row">
+                                <ul class="list col-sm ml-5">
+                                    <li>Сервис E-POS</li>
+                                    <li>Оплата в ЕРИП по коду услуги</li>
+                                    <li>Авто-мото покупка, обслуживание</li>
+                                    <li>Банковские, финансовые услуги</li>
+                                    <li>Билеты, лотереи</li>
+                                    <li>Благотворительность, общественные объединения</li>
+                                    <li>Интернет, телевидение, телефония</li>
+                                    <li>Интернет-магазины/сервисы</li>
+                                    <li>Информационные услуги</li>
+                                    <li>ИТ услуги</li>
+                                    <li></li>
+                                    <li>коммунальные платежи</li>
+                                    <li>МВД</li>
+                                    <li>Мобильная связь</li>
+                                    <li>Налоги</li>
+                                </ul>
+                                <ul class="list col-sm ml-5">
+                                    <li>Недвижимость</li>
+                                    <li>Образование и развитие</li>
+                                    <li>Обустройство дома, бытовые услуги</li>
+                                    <li>СМИ</li>
+                                    <li>Соцобслуживание, здравоохранение</li>
+                                    <li>Стоянки, гаражи, парковки</li>
+                                    <li>Суды, юстиция, юридические услуги</li>
+                                    <li>Таможенные платежи</li>
+                                    <li>Транспортные, экспедиционные услуги</li>
+                                    <li>Туризм и отдых</li>
+                                    <li>Фото, видео, полиграфия, реклама</li>
+                                    <li>ФСЗН</li>
+                                    <li>Прочие платежи</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <footer class="py-1 mx-2 mt-2 mb-3 rounded footerBlock">
+            <div class="social-contacts col-sm-8">
+
+                <div class="row h-25 mb-2"><p>Follow us:</p></div>
+                <div class="row socials">
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/instagram.png">
+                    </div>
+                    <div class="social-contacts-item col-sm py-2">
+                        <img src="img/sharethis.png">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-information col-sm-4">
+                +7 ### ###-##-##<br>+7 ### ###-##-##<br><br>
+                Our Address<br>
+                Our website<br>
+
+            </div>
+        </footer>
+    </div>
+
+</div>
+<div th:replace="layout :: site-script"></div>
+</body>
+</html>

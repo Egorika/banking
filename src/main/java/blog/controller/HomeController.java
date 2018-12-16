@@ -1,6 +1,6 @@
 package blog.controller;
 
-import blog.model.Payment;
+import blog.service.CardService;
 import blog.service.CreditService;
 import blog.service.PaymentService;
 import blog.service.UserService;
@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
-
 @Controller
 public class HomeController {
 
 	private UserService userService;
 	private PaymentService paymentService;
 	private CreditService creditService;
+	private CardService cardService;
 
 	@Autowired
-	public HomeController(UserService userService, PaymentService paymentService, CreditService creditService) {
+	public HomeController(UserService userService, PaymentService paymentService, CreditService creditService, CardService cardService) {
 		this.userService = userService;
 		this.paymentService = paymentService;
 		this.creditService = creditService;
+		this.cardService = cardService;
 	}
 
 
@@ -38,6 +38,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public String index(Model model) {
 		model.addAttribute("favourites", paymentService.findTop10ByFavouriteIsTrue());
+		model.addAttribute("cards", cardService.findAll());
 		return "index";
 	}
 
@@ -50,5 +51,15 @@ public class HomeController {
 	@RequestMapping("/settings")
 	public String settings(Model model) {
 		return "settings";
+	}
+
+	@RequestMapping("/payments")
+	public String payments(Model model) {
+		return "payments";
+	}
+
+	@RequestMapping("/other-payment")
+	public String otherPayment(Model model) {
+		return "other-payment";
 	}
 }
