@@ -13,7 +13,7 @@
                         <div class="mx-4">
                             <div class="credit-title row">
                                 <div class="col-sm">
-                                    <p class="content-title">Кредиты</p>
+                                    <p class="content-title">Настройки</p>
                                 </div>
                             </div>
                         </div>
@@ -26,19 +26,14 @@
                 <div class="row">
                     <div class="col-sm m-2">
                         <div class="my-3 mx-4">
-                            <div class="border-green-shadow row" th:each="credit : ${credits}">
-                                <div class="col-sm py-2">
-                                    <p class="payment-name" th:utext="*{credit.title}"></p>
-                                    <p class="payment-description" th:utext="*{'Дата открытия: ' + credit.date}">Дата открытия: 21.02.2018</p>
-                                </div>
-                                <div class="col-sm py-2">
-                                    <p class="payment-description">Остаток</p>
-                                    <p class="credit-value" th:utext="*{credit.value + ' BYN'}">9000 BYN</p>
-                                </div>
-                                <div class="col-sm-2 mr-4 my-auto">
-                                    <button class="btn btn-outline-success">Погасить</button>
-                                </div>
-                            </div>
+                            <p class="settings-title"></p>
+                            <p class="settings-title"><a href="#">Рассылка уведомлений</a></p>
+                            <p class="settings-title"><a href="#">Регистрационные данные</a></p>
+                            <p class="settings-title"><a href="#">Изменение пароля</a></p>
+                            <p class="settings-title"><a href="#">Изменение номера мобильного телефона</a></p>
+                            <p class="settings-title"><a href="#">Изменение адреса эл. почты</a></p>
+                            <p class="settings-title"><a href="#">Изменение личных предпочтений</a></p>
+                            <p class="settings-title"><a href="#">Удаление учетной записи</a></p>
                         </div>
                     </div>
                 </div>

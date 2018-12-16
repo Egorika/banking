@@ -36,22 +36,6 @@ public class User {
 	@Column(nullable = false)
 	private String fullName;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Post> posts = new ArrayList<>();
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Role> roles = new ArrayList<>();
-	
-	public void addPost(Post post) {
-		posts.add(post);
-		post.setAuthor(this);
-	}
-	
-	public void removeDoctor(Post post) {
-		posts.remove(post);
-		post.setAuthor(null);
-	}
-	
 	@Override
 	public String toString() {
 		return "User{" +

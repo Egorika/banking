@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Product {
+public class Credit {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,10 @@ public class Product {
 	@Column
 	private String title;
 
-	@Enumerated(EnumType.STRING)
 	@Column
-	private ProductType type;
+	private Integer value;
+
+	@Column
+	private String date;
+
 }

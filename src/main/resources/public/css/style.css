@@ -262,6 +262,16 @@ p.payment-description {
     margin: 0;
 }
 
+.carousel-img {
+    max-width: 1080px;
+    max-height: 600px;
+    filter: brightness(50%);
+}
+
+.settings-title {
+
+}
+
 .footerBlock {
     padding: 2% 10% 1% 10%;
     display: flex;
