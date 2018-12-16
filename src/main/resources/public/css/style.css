@@ -239,6 +239,13 @@ p.payment-description {
     border-radius: 0.5em;
 }
 
+.btn-outline-light:hover {
+    color: #f8f9fa;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f8f9fa;
+}
+
 .exchange {
     height: 250px;
 }
