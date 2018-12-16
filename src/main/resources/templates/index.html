@@ -5,6 +5,11 @@
 <div class="container">
     <header th:replace="layout :: site-header"></header>
     <main class="container">
+        <div class="row mx-0" th:if="${success} != null">
+            <div class="col-sm py-3 my-2 mx-2 rounded alert alert-success al" role="alert">
+                <span th:utext="${success}" role="alert"></span>
+            </div>
+        </div>
         <div class="row mx-0">
             <div class="col-sm shadow p-2 m-2 bg-white rounded" th:each="card : ${cards}">
                 <div class="row">
@@ -18,8 +23,11 @@
                     <div class="col-sm m-3">
                         <div class="my-2 mx-1">
                             <p>Баланс</p>
-                            <p class="h3 balance" th:utext="*{#numbers.formatDecimal(card.money, 0, 2, 'POINT')}">8 250.00</p>
-                            <button class="btn btn-outline-success btn-block">Перевод</button>
+                            <p class="h3 balance" th:utext="*{#numbers.formatDecimal(card.money, 0, 2, 'POINT')}">8
+                                250.00</p>
+                            <form th:action="@{'/transfer/' + ${card.id}}" method="get">
+                                <button class="btn btn-outline-success btn-block">Перевод</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -131,35 +139,8 @@
             </div>
         </div>
     </main>
-    <div class="container">
-        <footer class="py-1 mx-2 mt-2 mb-3 rounded footerBlock">
-            <div class="social-contacts col-sm-8">
-
-                <div class="row h-25 mb-2"><p>Follow us:</p></div>
-                <div class="row socials">
-                    <div class="social-contacts-item col-sm py-2">
-                        <img src="img/facebook.png">
-                    </div>
-                    <div class="social-contacts-item col-sm py-2">
-                        <img src="img/twitter.png">
-                    </div>
-                    <div class="social-contacts-item col-sm py-2">
-                        <img src="img/instagram.png">
-                    </div>
-                    <div class="social-contacts-item col-sm py-2">
-                        <img src="img/sharethis.png">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="footer-information col-sm-4">
-                +7 ### ###-##-##<br>+7 ### ###-##-##<br><br>
-                Our Address<br>
-                Our website<br>
-
-            </div>
-        </footer>
+    <div class="container sticky-bottom">
+        <footer th:replace="layout :: site-footer"></footer>
     </div>
 
 </div>

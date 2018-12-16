@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head"></head>
+
+<body>
+<div class="container">
+    <header th:replace="layout :: site-header"></header>
+    <main class="container">
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="mx-4">
+                            <div class="credit-title row">
+                                <div class="col-sm">
+                                    <p class="content-title">Перевод денег</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="shadow p-2 m-2 bg-white rounded col-sm">
+                <div class="row">
+                    <div class="col-sm m-2">
+                        <div class="my-3 mx-4">
+                            <form autocomplete="off" action="/transfer/complete" th:action="@{/transfer/complete}"
+                                  method="get"
+                                  th:object="${card}" data-toggle="validator"
+                                  role="form">
+                                <div class="form-group">
+                                    <label for="1">С карты</label>
+                                    <span type="text" class="form-control" id="1" th:utext="*{number}"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="2">На карту</label>
+                                    <input type="text" class="form-control" id="2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="3">Сумма</label>
+                                    <input type="number" class="form-control" id="3">
+                                </div>
+                                <button type="submit" class="btn btn-outline-success btn-lg mt-3">Перевести</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container sticky-bottom">
+        <footer th:replace="layout :: site-footer"></footer>
+    </div>
+
+</div>
+<div th:replace="layout :: site-script"></div>
+</body>
+</html>

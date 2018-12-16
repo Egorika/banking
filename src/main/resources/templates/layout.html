@@ -5,22 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>банкинг</title>
-    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-            crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
 <header th:fragment="site-header" th:remove="tag">
@@ -196,11 +188,34 @@
     </div>
 </header>
 
+<footer th:fragment="site-footer" th:remove="tag">
+    <footer class="py-1 mx-2 mt-2 mb-3 rounded footerBlock d-flex justify-content-between">
+        <div class="d-flex flex-column footer-contact my-3">
+            <h5>Свяжитесь с нами:</h5>
+            <h5><a class="phone fas fa-phone"></a> 8080</h5>
+        </div>
+        <ul class="follow-ul my-3">
+            <li>
+                <a href="" class="icon fab fa-instagram"></a>
+            </li>
+            <li>
+                <a href="" class="icon fab fa-facebook-square"></a>
+            </li>
+            <li>
+                <a href="" class="icon fab fa-twitter-square"></a>
+            </li>
+            <li>
+                <a href="" class="icon fab fa-google-plus-square"></a>
+            </li>
+        </ul>
+    </footer>
+</footer>
+
 <div th:fragment="site-script" th:remove="tag">
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" src="js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" src="js/jquery.js" th:src="@{/js/jquery.js}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/marked@0.3.6"></script>
