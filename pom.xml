@@ -9,7 +9,7 @@
     <packaging>war</packaging>
 
     <name>SpringBlog</name>
-    <description>First blog about ...</description>
+    <description>banking system</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -75,6 +75,14 @@
             <properties>
                 <username>root</username>
                 <password>12345678</password>
+                <uri>jdbc:mysql://localhost:3306/springblog?createDatabaseIfNotExist=true</uri>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <username>root</username>
+                <password>OyIrm1dasIrfvpwmmwwmttmg</password>
                 <uri>jdbc:mysql://localhost:3306/springblog?createDatabaseIfNotExist=true</uri>
             </properties>
         </profile>
